@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='css/main.css'>
+        <title>Formulir Pendaftaran Mahasiswa Baru</title>
+        <link rel="icon" type="png" href="gambar/icon.png" sizes="16x16"/>
+        <style>
+            .container {
+                border: 1px solid #000;
+                padding: 20px;
+                width: 53%;
+                position: relative;
+            }
+    
+            .judul {
+                background-color: #fff;
+                padding: 0 10px;
+                position: absolute;
+                top: -10px;
+                left: 10px;
+            }
+    
+            label {
+                display: inline-block; /* Menjadikan label inline block */
+                width: 260px;
+                margin-bottom: 5px;
+                white-space: nowrap; 
+            }
+            textarea {
+                width: 100%;
+                height: 100px; 
+                box-sizing: border-box; 
+            }
+    
+            td.tombol {
+                text-align: center;
+                padding-top: 20px; 
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h1 style="text-align: center;">Website Koma Berita</h1>
+            <p style="text-align: center;">Selamat datang di Website berita kami. 
+                Temukan berita baru setiap harinya hanya disini!!!</p>
+        </div>
+
+        <div id="main">
+            <div id="link">
+                <ul>
+                    <li><a href="#">London</a></li>
+                    <li><a href="#">Paris</a></li>
+                    <li><a href="#">Tokyo</a></li>
+                </ul>
+            </div>
+            <div id="content">
+                <p><b>Azzahra Wahyu Olivia     (233307006)</b></p>
+                <p><b>Qhiyas Adi Saputra       (233307023)</b></p>
+                <p><b>Septito Aldo Elvianto    (233307026)</b></p>
+
+                <br>
+                <center>
+                <div class="container">
+                    <div class="judul">Form Pendaftaran Mahasiswa Baru</div>
+                    <form action="/proses.php" method="post">
+                        <table>
+                            <tr>
+                                <td><label for="nama">Nama Lengkap</label></td>
+                                <td><input type="text" id="nama" name="nama" required></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><label for="ttl">Tempat/Tanggal Lahir</label></td>
+                                <td><input type="text" id="ttl" name="ttl" required> /
+                                <input type="number" id="ttl" name="tanggal" min="1" max="31"> - 
+                                <input type="number" id="ttl" name="bulan" min="1" max="12"> - 
+                                <input type="number" id="ttl" name="tahun" min="1990" max="2040">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="agama">Agama</label></td>
+                                <td>
+                                    <select id="agama" name="agama">
+                                        <option value="" disabled selected>-PILIH-</option>
+                                        <option value="islam">Islam</option>
+                                        <option value="kristen">Kristen</option>
+                                        <option value="katolik">Katolik</option>
+                                        <option value="hindu">Hindu</option>
+                                        <option value="budha">Budha</option>
+                                        <option value="konghucu">Konghucu</option>
+                                        <option value="lainnya">Lainnya</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="info">Jenis Kelamin</label></td>
+                                <td><input type="radio">Laki-Laki <input type="radio">Perempuan </td>
+                            </tr>
+                            <tr>
+                                <td><label for="ijazah">No. Ijazah SMA/SMK</label></td>
+                                <td><input type="text" id="ijazah" name="ijazah" required></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><label>Foto (Ukuran File Maks. 20 KB)</label></td>
+                                <td><input type="file" name="poto" accept="image/*" required></td>
+                            </tr>
+                            <tr>
+                                <td><label>Nama Ayah</label></td>
+                                <td><input type="text" name="ayah" required></td>
+                            </tr>
+                            <tr>
+                                <td><label>Nama Ibu</label></td>
+                                <td><input type="text" name="ibu" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="alamat">Alamat Rumah</label></td>
+                                <td><textarea id="alamat" name="alamat" rows="5" required></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><label>No. Telp</label></td>
+                                <td><input type="text" name="notlpn" required></td>
+                            </tr>
+                            <tr>
+                                <td><label>Nama Sekolah Asal</label></td>
+                                <td><input type="text" name="nm_sekolah_asal" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="alamat">Alamat Sekolah Asal</label></td>
+                                <td><textarea id="alamat" name="alamat_sekolah_asal" rows="5" required></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><label for="jurusan">Jurusan Dipilih</label></td>
+                                <td>
+                                    <select id="jurusan" name="jurusan">
+                                        <option value="" disabled selected>Pilih Jurusan</option>
+                                        <option value="ti">Teknologi Informasi</option>
+                                        <option value="tkk">Teknik Komputer Kontrol</option>
+                                        <option value="teklis">Teknik Listrik</option>
+                                        <option value="trpl">Teknologi Rekayasa Perangkat Lunak</option>
+                                        <option value="tro">Teknologi Rekayasa Otomotif</option>
+                                        <option value="tka">Teknik Perkeretaapian</option>
+                                        <option value="tpl">Teknik Pembentukan Logam</option>
+                                        <option value="akper">Akuntansi Perpajakan</option>
+                                        <option value="ak">Akutansi</option>
+                                        <option value="adbis">Administrasi Bisnis</option>
+                                        <option value="bing">Bahasa Inggris</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="info">Tahu Informasi Ini Dari</label></td>
+                                <td><input type="radio">Koran <input type="radio">Website 
+                                    <input type="radio">Telivisi <input type="radio">
+                                    Teman<input type="radio">Radio</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="tombol"><input type="submit" value="Daftar"> <input type="reset" value="Reset"></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+
+                <div id="footer">
+                    <p><i>copyright@Azzahra_233307006_2023</i></p>
+                    <p><i>copyright@Qhiyas_233307023_2023</i></p>
+                    <p><i>copyright@Septito_233307026_2023</i></p>
+                </div>
+            </div>
+            </center>
+    </body>
+</html>
